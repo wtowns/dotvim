@@ -16,3 +16,6 @@
 [submodule "bundle/vim-fuzzyfinder"]
 	path = bundle/vim-fuzzyfinder
 	url = git://github.com/clones/vim-fuzzyfinder.git
+[submodule "bundle/vim-smartinput"]
+	path = bundle/vim-smartinput
+	url = git://github.com/kana/vim-smartinput.git
