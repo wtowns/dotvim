@@ -4,9 +4,6 @@
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
-[submodule "bundle/git-vim"]
-	path = bundle/git-vim
-	url = git://github.com/motemen/git-vim.git
 [submodule "bundle/renamer.vim"]
 	path = bundle/renamer.vim
 	url = git://github.com/vim-scripts/renamer.vim.git
