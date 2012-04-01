@@ -33,10 +33,6 @@ nnoremap <Leader>l :TlistToggle<CR>
 let g:Tlist_Show_One_File=1
 let g:Tlist_Exit_OnlyWindow=1
 
-" Open the taglist automatically, and move focus back to the opened buffer
-:TlistOpen
-:wincmd l
-
 " }}}
 " Syntax ----------------------------------------------------------- {{{
 

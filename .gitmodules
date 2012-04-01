@@ -19,3 +19,6 @@
 [submodule "bundle/vim-smartinput"]
 	path = bundle/vim-smartinput
 	url = git://github.com/kana/vim-smartinput.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git://github.com/tpope/vim-fugitive.git
