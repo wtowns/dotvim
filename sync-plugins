@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# First, checkout any missing bundles
+git submodule update --init
+
+# Set the 'ignore' option in all submodules to 'untracked', so that help tags aren't seen as repo changes
+for s in `git submodule --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
+
+# Generate helptags for bundles
+vim -c 'call pathogen#helptags()' -c 'q'
