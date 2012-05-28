@@ -20,7 +20,7 @@ let php_folding = 1
 " Look for tags file up to /
 :set tags=tags;/
 
-nmap <silent> <F4>
+nmap <buffer><silent> <F4>
 	\ :!ctags -f ./tags
 	\ --langmap="php:+.inc"
 	\ -h ".php.inc" -R --totals=yes
