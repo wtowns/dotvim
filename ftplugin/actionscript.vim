@@ -10,6 +10,17 @@
 " Updated to support new AS 2.0 Flash 8 Language Elements 2005 September 29 (richard@appliedrhetoric.com)
 " Updated to support new AS 3.0 Language Elements 2006 June 20 by Abdul Qabiz (mail at abdulqabiz.com)
 
+" Layout Settings ----------------------------------------------------------- {{{
+
+setlocal number
+setlocal ruler
+
+setlocal tabstop=4
+setlocal shiftwidth=4
+
+setlocal smartindent
+
+" }}}
 " Tags ----------------------------------------------------------- {{{
 
 " Look for tags file up to /
