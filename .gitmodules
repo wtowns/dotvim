@@ -31,3 +31,6 @@
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git://github.com/nanotech/jellybeans.vim.git
+[submodule "bundle/delimitMate.vim"]
+	path = bundle/delimitMate.vim
+	url = git://github.com/Raimondi/delimitMate.git
