@@ -1,7 +1,8 @@
-set number
-set ruler
+setlocal number
+setlocal ruler
 
-set tabstop=2
-set shiftwidth=2
-set expandtab
+setlocal tabstop=2
+setlocal shiftwidth=2
+setlocal noexpandtab
+setlocal textwidth=0
 
