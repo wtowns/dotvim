@@ -1,8 +1,6 @@
-.vim Files
-==========
+# .vim Files
 
-Setup Instructions
-------------------
+## Setup Instructions
 
 Clone this repository into your ~/.vim directory:
 ```bash
@@ -17,8 +15,7 @@ Run the setup script:
 That's it!  Enjoy Vim.
 Also: Don't hesitate to send me a pull request with useful changes!
 
-Adding Plugins
---------------
+## Adding Plugins
 
 (Most of) the included vim plugins are managed by Pathogen and are
 tracked as submodules.  To add a new plugin, find the url for the
@@ -31,8 +28,7 @@ git submodule add $REPOSITORY_URL bundle/$PLUGIN_NAME
 Where $REPOSITORY\_URL is the plugin's public git repository and
 $PLUGIN\_NAME is the desired directory name for the plugin.
 
-Some Useful Commands
---------------------
+## Some Useful Commands
 
 Once inside vim, there are far too many custom features available to
 list here.  See the :help pages for the various plugins for instructions
@@ -61,8 +57,7 @@ jk         : Mapped to <esc> in insert/command modes
 ```
 (Note: <Leader> defaults to "\")
 
-TODO
-----
+## TODO
 
 * Convert remaining non-pathogen plugins
 * Find better solution for optional dependencies (ack, ctags)
