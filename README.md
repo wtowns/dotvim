@@ -13,6 +13,7 @@ Run the setup script:
 ```
 
 That's it!  Enjoy Vim.
+
 Also: Don't hesitate to send me a pull request with useful changes!
 
 ## Adding Plugins
@@ -30,10 +31,10 @@ $PLUGIN\_NAME is the desired directory name for the plugin.
 
 ## Some Useful Commands
 
-Once inside vim, there are far too many custom features available to
-list here.  See the :help pages for the various plugins for instructions
-on how to utilize them.  See the "Mappings" section of .vimrc, but here
-are some personal commands:
+Once inside vim, there are far too many custom features available to list here.
+Also see the :help pages for the various plugins for instructions on how to
+utilize them.  See the "Mappings" section of .vimrc, but here are some personal
+commands:
 
 ```
 <Leader><Leader> : Hide highlighting
@@ -54,8 +55,9 @@ L          : Move right one tab
 Ctrl+h     : Move tab left
 Ctrl+l     : Move tab right
 jk         : Mapped to <esc> in insert/command modes
-```
+
 (Note: <Leader> defaults to "\")
+```
 
 ## TODO
 
