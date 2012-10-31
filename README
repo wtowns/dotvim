@@ -60,3 +60,9 @@ Ctrl+l     : Move tab right
 jk         : Mapped to <esc> in insert/command modes
 ```
 (Note: <Leader> defaults to "\")
+
+TODO
+----
+
+* Convert remaining non-pathogen plugins
+* Find better solution for optional dependencies (ack, ctags)
