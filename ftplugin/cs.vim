@@ -5,7 +5,7 @@ setlocal ruler
 
 setlocal tabstop=4
 setlocal shiftwidth=4
-setlocal expandtab
+setlocal noexpandtab
 
 setlocal colorcolumn=80
 
