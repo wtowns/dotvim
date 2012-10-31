@@ -63,6 +63,7 @@ H          : Move left one tab
 L          : Move right one tab
 Ctrl+h     : Move tab left
 Ctrl+l     : Move tab right
+Ctrl+p     : Open Ctrl+P window in file mode
 jk         : Mapped to <esc> in insert/command modes
 
 (Note: <Leader> defaults to "\")
