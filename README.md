@@ -16,6 +16,15 @@ That's it!  Enjoy Vim.
 
 Also: Don't hesitate to send me a pull request with useful changes!
 
+## Powerline
+
+In order for the Powerline-enabled status line to be rendered correctly, you
+will need a patched font.  Follow the instructions located at
+https://github.com/Lokaltog/vim-powerline or use a pre-patched font at
+https://github.com/Lokaltog/vim-powerline/wiki/Patched-fonts .
+Alternatively, you can turn off the custom symbols by adding
+``let g:Powerline_symbols = compatible`` to your ``vimrc``.
+
 ## Adding Plugins
 
 (Most of) the included vim plugins are managed by Pathogen and are
