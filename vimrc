@@ -115,8 +115,8 @@ endif
 " Don't jump to the first item in cscope searches
 let Cscope_JumpError = 0
 
-" CtrlP file mode by default
-let g:ctrlp_by_filename = 1
+" CtrlP mixed mode by default
+let g:ctrlp_cmd = 'CtrlPMixed'
 " Search from root project directory in CtrlP
 let g:ctrlp_working_path_mode = 2
 " Keep the ctrlp cache between sessions
