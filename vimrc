@@ -46,27 +46,27 @@ endif
 set backspace=indent,eol,start
 
 if has("vms")
-  set nobackup			" do not keep a backup file, use versions instead
+  set nobackup                  " do not keep a backup file, use versions instead
 else
-  set backup			" keep a backup file
-  set backupdir-=.      	" do not save backups in current directory
-  set backupdir^=$HOME/tmp  	" put backups in $HOME/tmp directory
-  set dir-=.			" do not put swapfiles in current directory
-  set dir^=$HOME/tmp		" put swapfiles in $HOME/tmp directory
+  set backup                    " keep a backup file
+  set backupdir-=.              " do not save backups in current directory
+  set backupdir^=$HOME/tmp      " put backups in $HOME/tmp directory
+  set dir-=.                    " do not put swapfiles in current directory
+  set dir^=$HOME/tmp            " put swapfiles in $HOME/tmp directory
 endif
-set history=50			" keep 50 lines of command line history
-set ruler			" show the cursor position all the time
-set showcmd			" display incomplete commands
-set incsearch			" do incremental searching
-set nowrap			" don't wrap when reaching the right side of the screen
-set ignorecase			" ignore case when searching
-set smartcase			" ... except when we want it
-set notitle			" no 'thanks for flying vim'
-set wildmenu			" use the wildmenu for tab completion
-set laststatus=2		" Always show status line
-set cursorline			" Show the cursorline
-set cursorcolumn		" Show the cursorcolumn
-set scrolloff=3			" Give three lines of top/bottom context in buffers
+set history=50                  " keep 50 lines of command line history
+set ruler                       " show the cursor position all the time
+set showcmd                     " display incomplete commands
+set incsearch                   " do incremental searching
+set nowrap                      " don't wrap when reaching the right side of the screen
+set ignorecase                  " ignore case when searching
+set smartcase                   " ... except when we want it
+set notitle                     " no 'thanks for flying vim'
+set wildmenu                    " use the wildmenu for tab completion
+set laststatus=2                " Always show status line
+set cursorline                  " Show the cursorline
+set cursorcolumn                " Show the cursorcolumn
+set scrolloff=3                 " Give three lines of top/bottom context in buffers
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
