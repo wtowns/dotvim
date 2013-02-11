@@ -38,6 +38,14 @@ git submodule add $REPOSITORY_URL bundle/$PLUGIN_NAME
 Where $REPOSITORY\_URL is the plugin's public git repository and
 $PLUGIN\_NAME is the desired directory name for the plugin.
 
+## Updating
+
+When pulling new updates, there may be new plugins included.  In order to use
+them, you'll first need to download them:
+```bash
+git submodule update --init
+```
+
 ## Some Useful Commands
 
 Once inside vim, there are far too many custom features available to list here.
