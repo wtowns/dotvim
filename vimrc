@@ -127,8 +127,8 @@ let g:ctrlp_max_height = 20
 let g:ctrlp_lazy_update=50
 
 " Remap supertab to ctrl+j and ctrl+shift+j (works in terminal Cygwin, unlike the preferred ctrl+space)
-let g:SuperTabMappingForward = '<c-j>'
-let g:SuperTabMappingBackward = '<c-k>'
+let g:SuperTabMappingForward = '<c-k>'
+let g:SuperTabMappingBackward = '<c-j>'
 
 "}}}
 " Autocommands --------------------------------------------------------{{{
