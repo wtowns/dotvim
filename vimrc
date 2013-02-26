@@ -197,6 +197,20 @@ function! Putclip(type, ...) range
 	let @@ = reg_save
 endfunction
 
+function! NextSection(backwards, visual)
+	if a:visual
+		normal! gv
+	endif
+
+	if a:backwards
+		let dir = '?'
+	else
+		let dir = '/'
+	endif
+
+	execute 'silent normal! ' . dir . '^\s*$' . "\r"
+endfunction
+
 "}}}
 " Mappings ------------------------------------------------------------{{{
 
@@ -215,6 +229,12 @@ inoremap <C-U> <C-G>u<C-U>
 " turn off highlighting on return or double-leader
 nnoremap <CR> :noh<CR><CR>
 nnoremap <leader><leader> :noh<CR>
+
+" Allow { and } to work with files edited by primitive editors
+noremap <silent> } :call NextSection(0, 0)<cr>
+noremap <silent> { :call NextSection(1, 0)<cr>
+vnoremap <silent> } :<c-u>call NextSection(0, 1)<cr>
+vnoremap <silent> { :<c-u>call NextSection(1, 1)<cr>
 
 " j+k in insert mode == esc
 inoremap jk <esc>
