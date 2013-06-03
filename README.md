@@ -4,7 +4,7 @@
 
 Clone this repository into your ~/.vim directory:
 ```bash
-git clone git@github.com:wtowns/dotvim ~/.vim
+git clone git://github.com/wtowns/dotvim.git ~/.vim
 ```
 
 Run the setup script:
