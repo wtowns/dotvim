@@ -130,6 +130,8 @@ let g:ctrlp_lazy_update=50
 let g:SuperTabMappingForward = '<c-k>'
 let g:SuperTabMappingBackward = '<c-j>'
 
+"let g:Powerline_symbols = 'compatible'
+
 "}}}
 " Autocommands --------------------------------------------------------{{{
 
