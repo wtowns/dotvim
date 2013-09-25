@@ -36,6 +36,7 @@ endif
   autocmd BufRead,BufNewFile *.as setfiletype actionscript
   autocmd BufRead,BufNewFile *.xmobarrc setfiletype haskell
   autocmd BufRead,BufNewFile *.pex setfiletype xml
+  autocmd BufRead,BufNewFile *.jsfl setfiletype javascript
 
   augroup END
 
