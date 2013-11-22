@@ -118,8 +118,14 @@ let Cscope_JumpError = 0
 
 " CtrlP mixed mode by default
 let g:ctrlp_cmd = 'CtrlPMixed'
+" Only search for the given file types in CtrlP
+let g:ctrlp_custom_ignore = {
+    \ 'file': '\v(\.cpp|\.h|\.as|\.xml|\.txt|\.md|\.mkd)@<!$'
+    \ }
+" No limit to CtrlP file count
+let g:ctrlp_max_files = 0
 " Search from root project directory in CtrlP
-let g:ctrlp_working_path_mode = 2
+let g:ctrlp_working_path_mode = 'ra'
 " Keep the ctrlp cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0
 " Increase window size
