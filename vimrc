@@ -294,6 +294,8 @@ nnoremap <leader>t :FufTag<cr>
 nnoremap <leader>o :FufFile<cr>
 nnoremap <leader>b :FufBuffer<cr>
 nnoremap <leader>f :FufTaggedFile<cr>
+nnoremap g] :CtrlPtjump<cr>
+vnoremap g] :CtrlPtjumpVisual<cr>
 
 " go to tag in new tab
 nnoremap <leader>g] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
