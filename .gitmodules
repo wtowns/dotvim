@@ -55,3 +55,6 @@
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
+[submodule "bundle/vim-json.git"]
+	path = bundle/vim-json.git
+	url = https://github.com/elzr/vim-json.git
