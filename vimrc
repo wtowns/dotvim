@@ -123,6 +123,10 @@ let Cscope_JumpError = 0
 
 " CtrlP mixed mode by default
 let g:ctrlp_cmd = 'CtrlPMixed'
+" Use the silver searcher in CtrlP
+if executable('ag')
+	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 " Only search for the given file types in CtrlP
 let g:ctrlp_custom_ignore = {
     \ 'file': '\v(\.cpp|\.h|\.as|\.xml|\.txt|\.md|\.mkd)@<!$'
@@ -136,7 +140,7 @@ let g:ctrlp_clear_cache_on_exit = 0
 " Increase window size
 let g:ctrlp_max_height = 20
 " Lazy update, but with shorter delay
-let g:ctrlp_lazy_update=50
+let g:ctrlp_lazy_update=20
 
 " Remap supertab to ctrl+j and ctrl+shift+j (works in terminal Cygwin, unlike the preferred ctrl+space)
 let g:SuperTabMappingForward = '<c-k>'
@@ -270,8 +274,8 @@ vnoremap p pgvy
 nnoremap <Leader>sr :%s/\<<C-r><C-w>\>/
 
 " project Ack
-nnoremap <Leader>gg :Ack! -i ''<Left>
-nnoremap <Leader>gw :Ack! -i ''<Left><C-R><C-W><CR>
+nnoremap <Leader>gg :Ag! -i ''<Left>
+nnoremap <Leader>gw :Ag! -i ''<Left><C-R><C-W><CR>
 
 " copy to X11 clipboard
 vnoremap <Leader>c :call CopyToX11Primary()<CR>
