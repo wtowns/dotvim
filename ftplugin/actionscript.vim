@@ -27,7 +27,7 @@ setlocal cindent
 " Look for tags file up to /
 :set tags=tags;/
 
-nnoremap <silent><buffer> <F4> :!ctags -f ./tags -R<CR>
+nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
 
 " }}}
 " Dictionary ----------------------------------------------------------- {{{
