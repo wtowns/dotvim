@@ -1,60 +1,80 @@
 [submodule "bundle/taglist.vim"]
 	path = bundle/taglist.vim
 	url = git://github.com/rgo/taglist.vim.git
+	ignore = untracked
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+	ignore = untracked
 [submodule "bundle/renamer.vim"]
 	path = bundle/renamer.vim
 	url = git://github.com/vim-scripts/renamer.vim.git
+	ignore = untracked
 [submodule "bundle/vim-l9"]
 	path = bundle/vim-l9
 	url = git://github.com/clones/vim-l9.git
+	ignore = untracked
 [submodule "bundle/vim-fuzzyfinder"]
 	path = bundle/vim-fuzzyfinder
 	url = git://github.com/clones/vim-fuzzyfinder.git
+	ignore = untracked
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git://github.com/tpope/vim-fugitive.git
+	ignore = untracked
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
+	ignore = untracked
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git://github.com/mileszs/ack.vim.git
+	ignore = untracked
 [submodule "bundle/ctrlp.vim"]
 	path = bundle/ctrlp.vim
 	url = git://github.com/kien/ctrlp.vim.git
+	ignore = untracked
 [submodule "bundle/snipmate.vim"]
 	path = bundle/snipmate.vim
 	url = git://github.com/msanders/snipmate.vim.git
+	ignore = untracked
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git://github.com/nanotech/jellybeans.vim.git
+	ignore = untracked
 [submodule "bundle/delimitMate.vim"]
 	path = bundle/delimitMate.vim
 	url = git://github.com/Raimondi/delimitMate.git
+	ignore = untracked
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
+	ignore = untracked
 [submodule "bundle/vim-autocomplpop"]
 	path = bundle/vim-autocomplpop
 	url = git://github.com/wtowns/AutoComplPop.git
+	ignore = untracked
 [submodule "bundle/genutils"]
 	path = bundle/genutils
 	url = https://github.com/vim-scripts/genutils.git
+	ignore = untracked
 [submodule "bundle/vim-ctrlp-tjump"]
 	path = bundle/vim-ctrlp-tjump
 	url = https://github.com/ivalkeen/vim-ctrlp-tjump.git
+	ignore = untracked
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
+	ignore = untracked
 [submodule "bundle/vim-json.git"]
 	path = bundle/vim-json.git
 	url = https://github.com/elzr/vim-json.git
+	ignore = untracked
 [submodule "bundle/tagbar.vim"]
 	path = bundle/tagbar.vim
 	url = git://github.com/majutsushi/tagbar
+	ignore = untracked
 [submodule "bundle/vim-eunuch"]
 	path = bundle/vim-eunuch
 	url = https://github.com/tpope/vim-eunuch.git
+	ignore = untracked
