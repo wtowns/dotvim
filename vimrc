@@ -68,6 +68,7 @@ set laststatus=2                " Always show status line
 set cursorline                  " Show the cursorline
 set cursorcolumn                " Show the cursorcolumn
 set scrolloff=3                 " Give three lines of top/bottom context in buffers
+set wildignore+=*/bin-debug/*
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
