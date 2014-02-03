@@ -89,7 +89,11 @@ if &t_Co > 2 || has("gui_running")
 		let g:HemisuTransparentBackground = 1
 		colorscheme hemisu
 	else
+		let g:jellybeans_background_color = "none"
+		let g:jellybeans_background_color_256 = "none"
 		colorscheme jellybeans
+		" This is overridden manually in jellybeans; fix it
+		hi SpecialKey ctermbg=none
 	endif
 endif
 
