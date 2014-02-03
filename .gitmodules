@@ -58,3 +58,9 @@
 [submodule "bundle/vim-json.git"]
 	path = bundle/vim-json.git
 	url = https://github.com/elzr/vim-json.git
+[submodule "bundle/tagbar.vim"]
+	path = bundle/tagbar.vim
+	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/vim-eunuch"]
+	path = bundle/vim-eunuch
+	url = https://github.com/tpope/vim-eunuch.git
