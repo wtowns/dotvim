@@ -46,9 +46,6 @@
 [submodule "bundle/vim-ctrlp-tjump"]
 	path = bundle/vim-ctrlp-tjump
 	url = https://github.com/ivalkeen/vim-ctrlp-tjump.git
-[submodule "bundle/vim-sneak"]
-	path = bundle/vim-sneak
-	url = https://github.com/justinmk/vim-sneak.git
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = https://github.com/rking/ag.vim.git
