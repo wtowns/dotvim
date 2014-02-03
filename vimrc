@@ -33,6 +33,7 @@ endif
   augroup vimrcAutoExt
   au!
 
+  autocmd BufRead,BufNewFile *.txt setfiletype text
   autocmd BufRead,BufNewFile *.as setfiletype actionscript
   autocmd BufRead,BufNewFile *.xmobarrc setfiletype haskell
   autocmd BufRead,BufNewFile *.pex setfiletype xml
