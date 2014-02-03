@@ -40,9 +40,6 @@
 [submodule "bundle/vim-autocomplpop"]
 	path = bundle/vim-autocomplpop
 	url = git://github.com/wtowns/AutoComplPop.git
-[submodule "bundle/perforce"]
-	path = bundle/perforce
-	url = https://github.com/vim-scripts/perforce.git
 [submodule "bundle/genutils"]
 	path = bundle/genutils
 	url = https://github.com/vim-scripts/genutils.git
