@@ -20,6 +20,15 @@ set nocompatible
 call pathogen#infect()
 
 "}}}
+" Powerline -----------------------------------------------------------{{{
+
+if has('python')
+  python from powerline.vim import setup as powerline_setup
+  python powerline_setup()
+  python del powerline_setup
+endif
+
+"}}}
 " Workarounds ---------------------------------------------------------{{{
 
 " Screen defaults to 2 colors
@@ -110,15 +119,6 @@ set listchars+=eol:¬
 "}}}
 " Plugin Options ------------------------------------------------------{{{
 
-" Enable nice powerline symbols
-if &term == "rxvt-unicode-256color"
-    " Having font issues on arch at the moment
-    set encoding=utf-8
-    let Powerline_symbols = 'compatible'
-else
-    let Powerline_symbols = 'fancy'
-endif
-
 " Don't jump to the first item in cscope searches
 let Cscope_JumpError = 0
 
@@ -146,8 +146,6 @@ let g:ctrlp_lazy_update=20
 " Remap supertab to ctrl+j and ctrl+shift+j (works in terminal Cygwin, unlike the preferred ctrl+space)
 let g:SuperTabMappingForward = '<c-k>'
 let g:SuperTabMappingBackward = '<c-j>'
-
-"let g:Powerline_symbols = 'compatible'
 
 "}}}
 " Autocommands --------------------------------------------------------{{{

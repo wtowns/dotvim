@@ -2,10 +2,6 @@
 	path = bundle/taglist.vim
 	url = git://github.com/rgo/taglist.vim.git
 	ignore = untracked
-[submodule "bundle/vim-powerline"]
-	path = bundle/vim-powerline
-	url = git://github.com/Lokaltog/vim-powerline.git
-	ignore = untracked
 [submodule "bundle/renamer.vim"]
 	path = bundle/renamer.vim
 	url = git://github.com/vim-scripts/renamer.vim.git
