@@ -367,3 +367,10 @@ map! <Esc>OS -
 :iabbrev <expr> dts strftime("%a, %d %b %Y")
 
 "}}}
+" Local vimrc ---------------------------------------------------------{{{
+
+if filereadable(expand("$HOME/.vimrc-local"))
+    source $HOME/.vimrc-local
+endif
+
+"}}}
