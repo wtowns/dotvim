@@ -13,6 +13,7 @@ setlocal noexpandtab
 " Look for tags file up to /
 :set tags=tags;/
 
+nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
 
 " }}}
 
