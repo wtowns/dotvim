@@ -13,25 +13,8 @@ setlocal noexpandtab
 " Look for tags file up to /
 :set tags=tags;/
 
-if has("autocmd")
-  augroup csAutoTag
-  au!
-
-  autocmd BufWritePost *.cs
-    \ if filereadable('tags') |
-    \   call system('grep -Ev "'.expand('%').'" tags > tags.tmp && mv tags.tmp tags && ctags -a '.expand('%')) |
-    \ endif
-
-  augroup END
-endif
 
 " }}}
-" Taglist ----------------------------------------------------------- {{{
-
-" Map taglist toggle and try not to confuse it with multiple open files
-nnoremap <Leader>l :TlistToggle<CR>
-let g:Tlist_Show_One_File=1
-let g:Tlist_Exit_OnlyWindow=1
 
 " }}}
 " Syntax ----------------------------------------------------------- {{{
