@@ -49,6 +49,7 @@ endif
   autocmd BufRead,BufNewFile *.xmobarrc setfiletype haskell
   autocmd BufRead,BufNewFile *.pex setfiletype xml
   autocmd BufRead,BufNewFile *.jsfl setfiletype javascript
+  autocmd BufRead,BufNewFile *.unity setfiletype yaml
 
   augroup END
 
