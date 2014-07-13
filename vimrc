@@ -78,7 +78,6 @@ set notitle                     " no 'thanks for flying vim'
 set wildmenu                    " use the wildmenu for tab completion
 set laststatus=2                " Always show status line
 set cursorline                  " Show the cursorline
-set cursorcolumn                " Show the cursorcolumn
 set scrolloff=3                 " Give three lines of top/bottom context in buffers
 set wildignore+=*/bin-debug/*
 
