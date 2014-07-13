@@ -16,6 +16,8 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+let g:goldenview__enable_default_mapping = 0
+
 " pathogen-managed plugins, go!
 call pathogen#infect()
 
