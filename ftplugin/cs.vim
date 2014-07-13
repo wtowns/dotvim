@@ -16,6 +16,9 @@ setlocal noexpandtab
 nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
 
 " }}}
+" Dictionary ----------------------------------------------------------- {{{
+"
+setlocal dictionary-=$HOME/.vim/dict/unity.dict dictionary+=$HOME/.vim/dict/unity.dict
 
 " }}}
 " Syntax ----------------------------------------------------------- {{{
