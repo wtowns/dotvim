@@ -304,8 +304,8 @@ endif
 " tags, files, and buffers
 nnoremap <leader>t :FufTag<cr>
 nnoremap <leader>o :FufFile<cr>
-nnoremap <leader>b :FufBuffer<cr>
 nnoremap <leader>f :FufTaggedFile<cr>
+nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap g] :CtrlPtjump<cr>
 vnoremap g] :CtrlPtjumpVisual<cr>
 
