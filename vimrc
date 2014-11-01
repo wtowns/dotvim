@@ -133,9 +133,9 @@ if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 " Only search for the given file types in CtrlP
-"let g:ctrlp_custom_ignore = {
-"    \ 'file': '\v(\.cpp|\.h|\.as|\.xml|\.txt|\.md|\.mkd|\.cs)@<!$'
-"    \ }
+let g:ctrlp_custom_ignore = {
+    \ 'file': '\v(\.cpp|\.h|\.as|\.xml|\.txt|\.md|\.mkd|\.cs)@<!$'
+    \ }
 " No limit to CtrlP file count
 let g:ctrlp_max_files = 0
 " Search from root project directory in CtrlP
