@@ -50,6 +50,7 @@ endif
   autocmd BufRead,BufNewFile *.pex setfiletype xml
   autocmd BufRead,BufNewFile *.jsfl setfiletype javascript
   autocmd BufRead,BufNewFile *.unity setfiletype yaml
+  autocmd BufRead,BufNewFile *.prefab setfiletype yaml
 
   augroup END
 
