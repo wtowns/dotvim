@@ -21,6 +21,31 @@ nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
 setlocal dictionary-=$HOME/.vim/dict/unity.dict dictionary+=$HOME/.vim/dict/unity.dict
 
 " }}}
+" Indentation ----------------------------------------------------------- {{{
+
+setlocal indentexpr=GetCSIndent()
+
+function! GetCSIndent()
+
+    let this_line = getline(v:lnum)
+    let previous_line = getline(v:lnum - 1)
+
+    " Hit the start of the file, use zero indent.
+    if a:lnum == 0
+        return 0
+    endif
+
+    " If previous_line is an attribute line:
+    if previous_line =~? '^\s*\[[A-Za-z]' && previous_line =~? '\]$'
+        let ind = indent(v:lnum - 1)
+        return ind
+    else
+        return cindent(v:lnum)
+    endif
+
+endfunction
+
+" }}}
 " Syntax ----------------------------------------------------------- {{{
 
 syn match csharpError "[\\`]"
