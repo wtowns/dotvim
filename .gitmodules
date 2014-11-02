@@ -46,10 +46,6 @@
 	path = bundle/supertab
 	url = git://github.com/ervandew/supertab.git
 	ignore = untracked
-[submodule "bundle/vim-autocomplpop"]
-	path = bundle/vim-autocomplpop
-	url = git://github.com/wtowns/AutoComplPop.git
-	ignore = untracked
 [submodule "bundle/genutils"]
 	path = bundle/genutils
 	url = https://github.com/vim-scripts/genutils.git
@@ -89,3 +85,6 @@
 [submodule "bundle/omnisharp-vim"]
 	path = bundle/omnisharp-vim
 	url = https://github.com/OmniSharp/omnisharp-vim.git
+[submodule "bundle/YouCompleteMe"]
+	path = bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
