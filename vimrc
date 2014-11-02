@@ -97,6 +97,13 @@ endif
 
 " colorscheme
 if &t_Co > 2 || has("gui_running")
+	if has("gui_running")
+		let g:jellybeans_background_color = "black"
+		let g:jellybeans_background_color_256 = "black"
+	else
+		let g:jellybeans_background_color = "none"
+		let g:jellybeans_background_color_256 = "none"
+	endif
 	let g:jellybeans_overrides = {
 	\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'}
 	\}
@@ -105,8 +112,6 @@ if &t_Co > 2 || has("gui_running")
 		let g:HemisuTransparentBackground = 1
 		colorscheme hemisu
 	else
-		let g:jellybeans_background_color = "none"
-		let g:jellybeans_background_color_256 = "none"
 		colorscheme jellybeans
 		" This is overridden manually in jellybeans; fix it
 		hi SpecialKey ctermbg=none
