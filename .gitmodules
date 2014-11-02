@@ -86,3 +86,6 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule "bundle/omnisharp-vim"]
+	path = bundle/omnisharp-vim
+	url = https://github.com/OmniSharp/omnisharp-vim.git
