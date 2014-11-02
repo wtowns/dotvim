@@ -6,6 +6,9 @@ setlocal ruler
 setlocal tabstop=4
 setlocal shiftwidth=4
 setlocal noexpandtab
+setlocal noshowmatch " When autocomplete first match contains parenthesis, showmatch is very slow
+setlocal cmdheight=2 " Remove 'Press Enter to Continue' message when type information is longer than one line
+setlocal completeopt=longest,menuone
 
 " }}}
 " Tags ----------------------------------------------------------- {{{
@@ -14,6 +17,11 @@ setlocal noexpandtab
 :set tags=tags;/
 
 nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
+nnoremap <leader>fu :OmniSharpFindUsages<cr>
+nnoremap <leader>fx :OmniSharpFixUsings<cr>
+nnoremap <leader>dc :OmniSharpDocumentation<cr>
+nnoremap <leader>m :OmniSharpBuildAsync<cr>
+nnoremap <leader>r :OmniSharpReloadSolution<cr>
 
 " }}}
 " Dictionary ----------------------------------------------------------- {{{
