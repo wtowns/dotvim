@@ -135,6 +135,7 @@ let Cscope_JumpError = 0
 
 " CtrlP mixed mode by default
 let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_mruf_relative = 1
 " Use the silver searcher in CtrlP
 if executable('ag')
 	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
