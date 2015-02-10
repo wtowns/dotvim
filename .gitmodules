@@ -97,3 +97,6 @@
 [submodule "bundle/FastFold"]
 	path = bundle/FastFold
 	url = https://github.com/Konfekt/FastFold.git
+[submodule "bundle/vim-haystack"]
+	path = bundle/vim-haystack
+	url = git@github.com:tpope/vim-haystack.git
