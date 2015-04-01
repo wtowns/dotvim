@@ -97,9 +97,12 @@
 [submodule "bundle/FastFold"]
 	path = bundle/FastFold
 	url = https://github.com/Konfekt/FastFold.git
+	ignore = untracked
 [submodule "bundle/vim-haystack"]
 	path = bundle/vim-haystack
 	url = git@github.com:tpope/vim-haystack.git
+	ignore = untracked
 [submodule "bundle/csv.vim"]
 	path = bundle/csv.vim
 	url = git@github.com:vim-scripts/csv.vim.git
+	ignore = untracked
