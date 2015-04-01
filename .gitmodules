@@ -106,3 +106,7 @@
 	path = bundle/csv.vim
 	url = git@github.com:vim-scripts/csv.vim.git
 	ignore = untracked
+[submodule "bundle/git_patch_tags.vim"]
+	path = bundle/git_patch_tags.vim
+	url = https://github.com/vim-scripts/git_patch_tags.vim.git
+	ignore = untracked
