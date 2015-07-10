@@ -130,6 +130,9 @@ set listchars+=eol:¬
 "}}}
 " Plugin Options ------------------------------------------------------{{{
 
+" Try turning off delimitmate
+let delimitMate_offByDefault = 1
+
 " Don't jump to the first item in cscope searches
 let Cscope_JumpError = 0
 
