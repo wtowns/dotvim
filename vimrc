@@ -302,12 +302,14 @@ nnoremap <silent> <leader>y :call Putclip('n', 1)<CR>
 
 " windows
 nnoremap <leader>a <c-w><c-w>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
 " tab shortcuts
 nnoremap H :tabp<CR>
 nnoremap L :tabn<CR>
-nnoremap <silent> <C-h> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
-nnoremap <silent> <C-l> :execute 'silent! tabmove ' . tabpagenr()<CR>
 nnoremap <Leader>n :tabe<CR>
 if has("gui_running")
     map <C-tab> :tabn<CR>
