@@ -83,6 +83,7 @@ set cursorline                  " Show the cursorline
 set scrolloff=3                 " Give three lines of top/bottom context in buffers
 set hidden                      " Keep active buffer loaded when switching to a new one
 set wildignore+=*/bin-debug/*
+set clipboard=unnamed           " Use the system clipboard
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
