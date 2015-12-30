@@ -337,6 +337,10 @@ nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>go :only<cr>
 
+" OmniSharp
+nnoremap <leader>ca :OmniSharpGetCodeActions<cr>
+nnoremap <leader>cd :OmniSharpDocumentation<cr>
+
 " Make keypad work in Vim with iTerm on OS X
 map <Esc>Oq 1
 map <Esc>Or 2
