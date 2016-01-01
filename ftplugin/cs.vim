@@ -22,6 +22,8 @@ nnoremap <leader>fx :OmniSharpFixUsings<cr>
 nnoremap <leader>dc :OmniSharpDocumentation<cr>
 nnoremap <leader>m :OmniSharpBuildAsync<cr>
 nnoremap <leader>r :OmniSharpReloadSolution<cr>
+nnoremap <leader>ca :OmniSharpGetCodeActions<cr>
+nnoremap <leader>t :OmniSharpRunAllTests<cr>
 
 " }}}
 " Dictionary ----------------------------------------------------------- {{{
