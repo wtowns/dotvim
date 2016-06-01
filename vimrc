@@ -160,6 +160,8 @@ let g:ctrlp_clear_cache_on_exit = 0
 let g:ctrlp_max_height = 20
 " Lazy update, but with shorter delay
 let g:ctrlp_lazy_update=20
+" Add tag search to CtrlP
+let g:ctrlp_extensions = ['tag']
 
 " Remap supertab to ctrl+j and ctrl+shift+j (works in terminal Cygwin, unlike the preferred ctrl+space)
 let g:SuperTabMappingForward = '<c-k>'
@@ -328,9 +330,6 @@ if has("gui_running")
 endif
 
 " tags, files, and buffers
-nnoremap <leader>t :FufTag<cr>
-nnoremap <leader>o :FufFile<cr>
-nnoremap <leader>f :FufTaggedFile<cr>
 nnoremap <leader>b :CtrlPBuffer<cr>
 nnoremap g] :CtrlPtjump<cr>
 vnoremap g] :CtrlPtjumpVisual<cr>
