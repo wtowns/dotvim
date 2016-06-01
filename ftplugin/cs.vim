@@ -185,3 +185,19 @@ endif
 let b:current_syntax="csharp"
 
 " }}}
+" Functions ----------------------------------------------------------- {{{
+
+let g:ulti_expand_or_jump_res = 0
+if !exists("*ExpandSnippetOrCarriageReturn")
+        function ExpandSnippetOrCarriageReturn()
+                let snippet = UltiSnips#ExpandSnippetOrJump()
+                if g:ulti_expand_or_jump_res > 0
+                        return snippet
+                else
+                        return "\<CR>"
+                endif
+        endfunction
+endif
+inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
+
+" }}}
