@@ -167,6 +167,9 @@ let g:ctrlp_extensions = ['tag']
 let g:SuperTabMappingForward = '<c-k>'
 let g:SuperTabMappingBackward = '<c-j>'
 
+" Keep netrw's current directory in sync with vim's
+let g:netrw_keepdir=0
+
 "}}}
 " Autocommands --------------------------------------------------------{{{
 
