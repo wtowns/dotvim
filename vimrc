@@ -99,15 +99,16 @@ endif
 " colorscheme
 if &t_Co > 2 || has("gui_running")
 	if has("gui_running")
-		let g:jellybeans_background_color = "black"
-		let g:jellybeans_background_color_256 = "black"
+		let g:jellybeans_overrides = {
+		\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'}
+		\	'background': { 'guibg': 'Black', 'ctermbg': 'Black' }
+		\}
 	else
-		let g:jellybeans_background_color = "none"
-		let g:jellybeans_background_color_256 = "none"
+		let g:jellybeans_overrides = {
+		\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'},
+		\	'background': { 'guibg': '', 'ctermbg': '' }
+		\}
 	endif
-	let g:jellybeans_overrides = {
-	\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'}
-	\}
 	set background=dark
 	if &term == "rxvt-unicode-256color"
 		let g:HemisuTransparentBackground = 1
