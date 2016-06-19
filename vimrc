@@ -51,6 +51,7 @@ endif
   autocmd BufRead,BufNewFile *.jsfl setfiletype javascript
   autocmd BufRead,BufNewFile *.unity setfiletype yaml
   autocmd BufRead,BufNewFile *.prefab setfiletype yaml
+  autocmd BufRead,BufNewFile *gitconfig* setfiletype gitconfig
 
   augroup END
 
