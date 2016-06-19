@@ -2,25 +2,25 @@
 # Initial setup script for vim settings and plugins
 
 # Check if ~/.vim should be symlinked
-setupdir=$(readlink -f $(dirname $0))
-eval vimdir="~/.vim"
+setupdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+vimdir="$(cd "$HOME/.vim" && pwd)"
 if [ $setupdir != $vimdir ]; then
         echo "Not cloned into ~/.vim; Creating ~/.vim symlink"
-        if [ -d ~/.vim ]; then
-                mv ~/.vim ~/.vim.orig
+        if [ -d "$HOME/.vim" ]; then
+                mv "$HOME/.vim" "$HOME/.vim.orig"
                 echo "Found existing ~/.vim directory; moved to ~/.vim.orig"
         fi
-        ln -s $setupdir ~/.vim
+        ln -s $setupdir "$HOME/.vim"
         echo "Created ~/.vim symlink, pointing to" $setupdir
 fi
 
 # Create symlink to vimrc
-vimrcpath="$(dirname $0)/vimrc"
-if [ -e ~/.vimrc ]; then
-        mv ~/.vimrc ~/.vimrc.orig
+vimrcpath="$setupdir/vimrc"
+if [ -e "$HOME/.vimrc" ]; then
+        mv "$HOME/.vimrc" "$HOME/.vimrc.orig"
         echo "Found existing ~/.vimrc file; moved to ~/.vimrc.orig"
 fi
-ln -s $vimrcpath ~/.vimrc
+ln -s $vimrcpath "$HOME/.vimrc"
 echo "Created ~/.vimrc symlink, pointing to" $vimrcpath
 
 # Get plugin bundles
