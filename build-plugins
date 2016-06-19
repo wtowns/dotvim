@@ -1,0 +1,18 @@
+#!/bin/bash
+# Generates artifacts and binaries required by plugins
+
+# Set the 'ignore' option in all submodules to 'untracked', so that help tags aren't seen as repo changes
+for s in `git submodule --quiet foreach 'echo $name'` ; do git config submodule.$s.ignore untracked ; done
+
+# Generate helptags for bundles
+vim -c 'call pathogen#helptags()' -c 'q'
+
+# Build omnisharp server
+if command -v mono >/dev/null 2>&1; then
+	pushd bundle/omnisharp-vim/server
+	xbuild
+	popd
+else
+	echo "Warning: Program 'mono' not found; omnisharp server will not be built."
+fi
+
