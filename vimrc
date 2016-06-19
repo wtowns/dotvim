@@ -154,14 +154,15 @@ let g:ctrlp_custom_ignore = {
     \ }
 " No limit to CtrlP file count
 let g:ctrlp_max_files = 0
-" Search from root project directory in CtrlP
-let g:ctrlp_working_path_mode = 'ra'
+" Search from root project directory in CtrlP, starting from CWD; use CWD as
+"  fallback
+let g:ctrlp_working_path_mode = 'rwa'
 " Keep the ctrlp cache between sessions
 let g:ctrlp_clear_cache_on_exit = 0
 " Increase window size
 let g:ctrlp_max_height = 20
-" Lazy update, but with shorter delay
-let g:ctrlp_lazy_update=20
+" Lazy update
+let g:ctrlp_lazy_update=1
 " Add tag search to CtrlP
 let g:ctrlp_extensions = ['tag']
 
