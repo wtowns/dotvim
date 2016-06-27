@@ -5,19 +5,12 @@ namespace ${1}
 }
 endsnippet
 
-snippet fileclass "class file" b
-// `!p
-snip.rv = snip.fn
-`
-// Copyright (c) `date +%Y` Orbital Games, LLC
+snippet xmlsummary "xml summary documentation" b
+/// <summary>
+/// ${0}
+/// </summary>
+endsnippet
 
-using UnityEngine;
-
-namespace OrbitalGames.${1}
-{
-	public class ${2:`!p snip.rv = snip.fn[:-3]`}${3: : MonoBehaviour}
-	{
-		${0}
-	}
-}
+snippet xmlsummaryinl "xml summary documentation, inline" b
+/// <summary>${0}</summary>
 endsnippet
