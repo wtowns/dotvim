@@ -122,3 +122,6 @@
 [submodule "bundle/gitignore"]
 	path = bundle/gitignore
 	url = https://github.com/vim-scripts/gitignore.git
+[submodule "bundle/vim-gradle"]
+	path = bundle/vim-gradle
+	url = https://github.com/tfnico/vim-gradle.git
