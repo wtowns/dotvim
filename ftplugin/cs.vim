@@ -11,13 +11,20 @@ setlocal cmdheight=2 " Remove 'Press Enter to Continue' message when type inform
 setlocal completeopt=longest,menuone
 
 " }}}
-" Tags ----------------------------------------------------------- {{{
+" Plugin Options ------------------------------------------------------------ {{{
+
+" Give OmniSharp more time for larger projects
+let g:OmniSharp_timeout = 10
+
+"}}}
+" Tags ---------------------------------------------------------------------- {{{
 
 " Look for tags file up to /
 :set tags=tags;/
 
 nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
 nnoremap <leader>fu :OmniSharpFindUsages<cr>
+nnoremap <leader>fd :OmniSharpGotoDefinition<cr>
 nnoremap <leader>fx :OmniSharpFixUsings<cr>
 nnoremap <leader>dc :OmniSharpDocumentation<cr>
 nnoremap <leader>m :OmniSharpBuildAsync<cr>
@@ -26,12 +33,12 @@ nnoremap <leader>ca :OmniSharpGetCodeActions<cr>
 nnoremap <leader>t :OmniSharpRunAllTests<cr>
 
 " }}}
-" Dictionary ----------------------------------------------------------- {{{
+" Dictionary ---------------------------------------------------------------- {{{
 "
 setlocal dictionary-=$HOME/.vim/dict/unity.dict dictionary+=$HOME/.vim/dict/unity.dict
 
 " }}}
-" Indentation ----------------------------------------------------------- {{{
+" Indentation --------------------------------------------------------------- {{{
 
 setlocal indentexpr=GetCSIndent()
 
@@ -56,7 +63,7 @@ function! GetCSIndent()
 endfunction
 
 " }}}
-" Syntax ----------------------------------------------------------- {{{
+" Syntax -------------------------------------------------------------------- {{{
 
 syn match csharpError "[\\`]"
 syn match csharpError "<<<\|\.\.\|=>\|<>\|||=\|&&=\|[^-]->\|\*\/"
@@ -185,7 +192,7 @@ endif
 let b:current_syntax="csharp"
 
 " }}}
-" Functions ----------------------------------------------------------- {{{
+" Functions ----------------------------------------------------------------- {{{
 
 let g:ulti_expand_or_jump_res = 0
 if !exists("*ExpandSnippetOrCarriageReturn")
