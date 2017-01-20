@@ -146,12 +146,15 @@ let g:ctrlp_mruf_relative = 1
 let g:ctrlp_by_filename = 1
 " Use the silver searcher in CtrlP
 if executable('ag')
-	let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+	let g:ctrlp_user_command = {
+	\ 'types': {
+		\ 1: ['.git', 'cd %s && git ls-files; git submodule foreach "for file in $(git ls-files); do echo \"$path/$file\"; done"'],
+		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
+		\ },
+	\ 'fallback': 'find %s -type f'
+	\ }
+
 endif
-" Only search for the given file types in CtrlP
-let g:ctrlp_custom_ignore = {
-    \ 'file': '\v(\.cpp|\.h|\.as|\.xml|\.txt|\.md|\.mkd|\.cs)@<!$'
-    \ }
 " No limit to CtrlP file count
 let g:ctrlp_max_files = 0
 " Search from root project directory in CtrlP, starting from CWD; use CWD as
@@ -306,8 +309,11 @@ vnoremap p pgvy
 nnoremap <Leader>sr :%s/\<<C-r><C-w>\>/
 
 " project Ack
-nnoremap <Leader>gg :Ag! -i ''<Left>
-nnoremap <Leader>gw :Ag! -i ''<Left><C-R><C-W><CR>
+if executable('ag')
+	let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+nnoremap <Leader>gg :Ack! -i ''<Left>
+nnoremap <Leader>gw :Ack! -i ''<Left><C-R><C-W><CR>
 
 " copy to X11 clipboard
 vnoremap <Leader>c :call CopyToX11Primary()<CR>
