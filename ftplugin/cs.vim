@@ -28,14 +28,15 @@ let g:syntastic_enable_highlighting = 0
 :set tags=tags;/
 
 nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
-nnoremap <leader>fu :OmniSharpFindUsages<cr>
-nnoremap <leader>fd :OmniSharpGotoDefinition<cr>
-nnoremap <leader>fx :OmniSharpFixUsings<cr>
-nnoremap <leader>dc :OmniSharpDocumentation<cr>
-nnoremap <leader>m :OmniSharpBuildAsync<cr>
-nnoremap <leader>r :OmniSharpReloadSolution<cr>
-nnoremap <leader>ca :OmniSharpGetCodeActions<cr>
-nnoremap <leader>t :OmniSharpRunAllTests<cr>
+nnoremap <buffer> <leader>fu :OmniSharpFindUsages<cr>
+nnoremap <buffer> <leader>fd :OmniSharpGotoDefinition<cr>
+nnoremap <silent> <buffer> <cr> :OmniSharpGotoDefinition<cr>
+nnoremap <buffer> <leader>fx :OmniSharpFixUsings<cr>
+nnoremap <buffer> <leader>dc :OmniSharpDocumentation<cr>
+nnoremap <buffer> <leader>m :OmniSharpBuildAsync<cr>
+nnoremap <buffer> <leader>r :OmniSharpReloadSolution<cr> :YcmRestartServer<cr>
+nnoremap <buffer> <leader>ca :OmniSharpGetCodeActions<cr>
+nnoremap <buffer> <leader>t :OmniSharpRunAllTests<cr>
 
 " }}}
 " Dictionary ---------------------------------------------------------------- {{{
