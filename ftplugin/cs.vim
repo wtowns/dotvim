@@ -15,6 +15,11 @@ setlocal completeopt=longest,menuone
 
 " Give OmniSharp more time for larger projects
 let g:OmniSharp_timeout = 10
+" Syntastic
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+let g:syntastic_cursor_columns = 0
+let g:syntastic_enable_highlighting = 0
 
 "}}}
 " Tags ---------------------------------------------------------------------- {{{
