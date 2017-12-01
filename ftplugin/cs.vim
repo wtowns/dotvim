@@ -62,6 +62,10 @@ function! GetCSIndent()
     if previous_line =~? '^\s*\[[A-Za-z]' && previous_line =~? '\]$'
         let ind = indent(v:lnum - 1)
         return ind
+    " If previous_line is a dictionary initializer entry
+    elseif previous_line =~? '},$'
+        let ind = indent(v:lnum - 1)
+        return ind
     else
         return cindent(v:lnum)
     endif
