@@ -21,6 +21,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cursor_columns = 0
 let g:syntastic_enable_highlighting = 0
 
+let g:OmniSharp_selector_ui = 'fzf'
 "}}}
 " Tags ---------------------------------------------------------------------- {{{
 
