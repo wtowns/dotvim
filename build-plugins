@@ -17,26 +17,4 @@ else
 fi
 
 # Install YouCompleteMe
-echo "Building YouCompleteMe with:"
-echo " - C-family support"
-YCM_FLAGS="--clang-completer"
-if command -v xbuild >/dev/null 2>&1; then
-	echo " - C# support"
-	YCM_FLAGS="$YCM_FLAGS --omnisharp-completer"
-fi
-if command -v go >/dev/null 2>&1; then
-	echo " - Go support"
-	YCM_FLAGS="$YCM_FLAGS --gocode-completer"
-fi
-if command -v node >/dev/null 2>&1 && command -v npm >/dev/null 2>&1; then
-	echo " - JavaScript support"
-	YCM_FLAGS="$YCM_FLAGS --tern-completer"
-fi
-if command -v rustc >/dev/null 2>&1 && command -v cargo >/dev/null 2>&1; then
-	echo " - Rust support"
-	YCM_FLAGS="$YCM_FLAGS --racer-completer"
-fi
-echo "** Note: YouCompleteMe install requires root **"
-pushd bundle/YouCompleteMe
-sudo ./install.py $YCM_FLAGS
-popd
+./build-ycm
