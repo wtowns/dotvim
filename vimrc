@@ -18,6 +18,8 @@ set nocompatible
 
 let g:goldenview__enable_default_mapping = 0
 
+let g:pathogen_disabled = ['ctrlp.vim']
+
 " pathogen-managed plugins, go!
 call pathogen#infect()
 
@@ -85,6 +87,7 @@ set scrolloff=3                 " Give three lines of top/bottom context in buff
 set hidden                      " Keep active buffer loaded when switching to a new one
 set wildignore+=*/bin-debug/*
 set clipboard=unnamed           " Use the system clipboard
+set noshowmode                  " Don't show the mode in the status line (leave it up to powerline)
 
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
@@ -101,11 +104,13 @@ endif
 if &t_Co > 2 || has("gui_running")
 	if has("gui_running")
 		let g:jellybeans_overrides = {
+		\	'Folded': { 'guifg': 'a0a8b0', 'guibg': 'Black', 'ctermfg': 'a0a8b0', 'ctermbg': 'Black', 'attr': 'italic' },
 		\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'}
 		\	'background': { 'guibg': 'Black', 'ctermbg': 'Black' }
 		\}
 	else
 		let g:jellybeans_overrides = {
+		\	'Folded': { 'guifg': 'a0a8b0', 'guibg': '', 'ctermfg': 'a0a8b0', 'ctermbg': '', 'attr': 'italic' },
 		\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'},
 		\	'background': { 'guibg': '', 'ctermbg': '' }
 		\}
@@ -169,9 +174,24 @@ let g:ctrlp_lazy_update=1
 " Add tag search to CtrlP
 let g:ctrlp_extensions = ['tag']
 
-" Remap supertab to ctrl+j and ctrl+shift+j (works in terminal Cygwin, unlike the preferred ctrl+space)
-let g:SuperTabMappingForward = '<c-k>'
-let g:SuperTabMappingBackward = '<c-j>'
+" Use OmniSharp for syntastic checkers
+let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
+
+" Eclim
+let g:EclimJavaImplInsertAtCursor = 1
+
+" YouCompleteMe
+let g:ycm_auto_trigger = 0 " Turn off the popup-as-you-type (feels slow to me)
+"
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "}}}
 " Autocommands --------------------------------------------------------{{{
@@ -339,9 +359,7 @@ if has("gui_running")
 endif
 
 " tags, files, and buffers
-nnoremap <leader>b :CtrlPBuffer<cr>
-nnoremap g] :CtrlPtjump<cr>
-vnoremap g] :CtrlPtjumpVisual<cr>
+nnoremap <leader>b :Buffers<cr>
 
 " go to tag in new tab
 nnoremap <leader>g] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
@@ -355,6 +373,8 @@ nnoremap <leader>gd :Gdiff<cr>
 nnoremap <leader>gs :Gstatus<cr>
 nnoremap <leader>gc :Gcommit<cr>
 nnoremap <leader>go :only<cr>
+
+nnoremap <c-p> :Files<cr>
 
 " Make keypad work in Vim with iTerm on OS X
 map <Esc>Oq 1
