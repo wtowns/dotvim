@@ -46,6 +46,7 @@ endif
   augroup vimrcAutoExt
   au!
 
+  autocmd BufRead,BufNewFile CMakeLists.txt setfiletype cmake
   autocmd BufRead,BufNewFile *.txt setfiletype text
   autocmd BufRead,BufNewFile *.as setfiletype actionscript
   autocmd BufRead,BufNewFile *.xmobarrc setfiletype haskell
