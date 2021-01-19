@@ -82,6 +82,7 @@ set ignorecase                  " ignore case when searching
 set smartcase                   " ... except when we want it
 set notitle                     " no 'thanks for flying vim'
 set wildmenu                    " use the wildmenu for tab completion
+set wildmode=longest:full,full  " first tab completes as much as possible; tabs after will cycle through options
 set laststatus=2                " Always show status line
 set cursorline                  " Show the cursorline
 set scrolloff=3                 " Give three lines of top/bottom context in buffers
