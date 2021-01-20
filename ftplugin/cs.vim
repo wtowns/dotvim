@@ -11,33 +11,10 @@ setlocal cmdheight=2 " Remove 'Press Enter to Continue' message when type inform
 setlocal completeopt=longest,menuone
 
 " }}}
-" Plugin Options ------------------------------------------------------------ {{{
-
-" Give OmniSharp more time for larger projects
-let g:OmniSharp_timeout = 10
-" Syntastic
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cursor_columns = 0
-let g:syntastic_enable_highlighting = 0
-
-let g:OmniSharp_selector_ui = 'fzf'
-"}}}
 " Tags ---------------------------------------------------------------------- {{{
 
 " Look for tags file up to /
 :set tags=tags;/
-
-nnoremap <silent><buffer> <Space> :TagbarOpenAutoClose<CR>
-nnoremap <buffer> <leader>fu :OmniSharpFindUsages<cr>
-nnoremap <buffer> <leader>fd :OmniSharpGotoDefinition<cr>
-nnoremap <silent> <buffer> <cr> :OmniSharpGotoDefinition<cr>
-nnoremap <buffer> <leader>fx :OmniSharpFixUsings<cr>
-nnoremap <buffer> <leader>dc :OmniSharpDocumentation<cr>
-nnoremap <buffer> <leader>m :OmniSharpBuildAsync<cr>
-nnoremap <buffer> <leader>r :OmniSharpReloadSolution<cr> :YcmRestartServer<cr>
-nnoremap <buffer> <leader>ca :OmniSharpGetCodeActions<cr>
-nnoremap <buffer> <leader>t :OmniSharpRunAllTests<cr>
 
 " }}}
 " Dictionary ---------------------------------------------------------------- {{{
@@ -201,21 +178,5 @@ if !exists("did_csharp_syntax_inits")
     hi csharpProperties gui=italic
 endif
 let b:current_syntax="csharp"
-
-" }}}
-" Functions ----------------------------------------------------------------- {{{
-
-let g:ulti_expand_or_jump_res = 0
-if !exists("*ExpandSnippetOrCarriageReturn")
-        function ExpandSnippetOrCarriageReturn()
-                let snippet = UltiSnips#ExpandSnippetOrJump()
-                if g:ulti_expand_or_jump_res > 0
-                        return snippet
-                else
-                        return "\<CR>"
-                endif
-        endfunction
-endif
-inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " }}}
