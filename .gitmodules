@@ -1,136 +1,14 @@
-[submodule "bundle/taglist.vim"]
-	path = bundle/taglist.vim
-	url = git://github.com/rgo/taglist.vim.git
-	ignore = untracked
-[submodule "bundle/renamer.vim"]
-	path = bundle/renamer.vim
-	url = git://github.com/vim-scripts/renamer.vim.git
-	ignore = untracked
-[submodule "bundle/vim-l9"]
-	path = bundle/vim-l9
-	url = git://github.com/clones/vim-l9.git
-	ignore = untracked
-[submodule "bundle/vim-fuzzyfinder"]
-	path = bundle/vim-fuzzyfinder
-	url = git://github.com/clones/vim-fuzzyfinder.git
-	ignore = untracked
-[submodule "bundle/vim-fugitive"]
-	path = bundle/vim-fugitive
-	url = git://github.com/tpope/vim-fugitive.git
-	ignore = untracked
 [submodule "bundle/vim-markdown"]
 	path = bundle/vim-markdown
 	url = git://github.com/plasticboy/vim-markdown.git
-	ignore = untracked
-[submodule "bundle/ack.vim"]
-	path = bundle/ack.vim
-	url = git://github.com/mileszs/ack.vim.git
-	ignore = untracked
-[submodule "bundle/ctrlp.vim"]
-	path = bundle/ctrlp.vim
-	url = git://github.com/kien/ctrlp.vim.git
-	ignore = untracked
-[submodule "bundle/snipmate.vim"]
-	path = bundle/snipmate.vim
-	url = git://github.com/msanders/snipmate.vim.git
 	ignore = untracked
 [submodule "bundle/jellybeans.vim"]
 	path = bundle/jellybeans.vim
 	url = git://github.com/nanotech/jellybeans.vim.git
 	ignore = untracked
-[submodule "bundle/delimitMate.vim"]
-	path = bundle/delimitMate.vim
-	url = git://github.com/Raimondi/delimitMate.git
-	ignore = untracked
-[submodule "bundle/supertab"]
-	path = bundle/supertab
-	url = git://github.com/ervandew/supertab.git
-	ignore = untracked
-[submodule "bundle/genutils"]
-	path = bundle/genutils
-	url = https://github.com/vim-scripts/genutils.git
-	ignore = untracked
-[submodule "bundle/vim-ctrlp-tjump"]
-	path = bundle/vim-ctrlp-tjump
-	url = https://github.com/ivalkeen/vim-ctrlp-tjump.git
-	ignore = untracked
-[submodule "bundle/ag.vim"]
-	path = bundle/ag.vim
-	url = https://github.com/rking/ag.vim.git
-	ignore = untracked
-[submodule "bundle/vim-json.git"]
-	path = bundle/vim-json.git
-	url = https://github.com/elzr/vim-json.git
-	ignore = untracked
-[submodule "bundle/tagbar.vim"]
-	path = bundle/tagbar.vim
-	url = git://github.com/majutsushi/tagbar
-	ignore = untracked
-[submodule "bundle/vim-eunuch"]
-	path = bundle/vim-eunuch
-	url = https://github.com/tpope/vim-eunuch.git
-	ignore = untracked
-[submodule "bundle/GoldenView.vim"]
-	path = bundle/GoldenView.vim
-	url = https://github.com/zhaocai/GoldenView.Vim.git
-	ignore = untracked
-[submodule "bundle/vim-yaml"]
-	path = bundle/vim-yaml
-	url = https://github.com/stephpy/vim-yaml.git
-	ignore = untracked
-[submodule "bundle/vim-dispatch"]
-	path = bundle/vim-dispatch
-	url = https://github.com/tpope/vim-dispatch.git
-	ignore = untracked
-[submodule "bundle/syntastic"]
-	path = bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
-	ignore = untracked
-[submodule "bundle/omnisharp-vim"]
-	path = bundle/omnisharp-vim
-	url = https://github.com/OmniSharp/omnisharp-vim.git
-	ignore = untracked
-[submodule "bundle/YouCompleteMe"]
-	path = bundle/YouCompleteMe
-	url = https://github.com/Valloric/YouCompleteMe.git
-	ignore = untracked
-[submodule "bundle/FastFold"]
-	path = bundle/FastFold
-	url = https://github.com/Konfekt/FastFold.git
-	ignore = untracked
-[submodule "bundle/vim-haystack"]
-	path = bundle/vim-haystack
-	url = git@github.com:tpope/vim-haystack.git
-	ignore = untracked
-[submodule "bundle/csv.vim"]
-	path = bundle/csv.vim
-	url = git@github.com:vim-scripts/csv.vim.git
-	ignore = untracked
-[submodule "bundle/git_patch_tags.vim"]
-	path = bundle/git_patch_tags.vim
-	url = https://github.com/vim-scripts/git_patch_tags.vim.git
-	ignore = untracked
 [submodule "bundle/vim-vinegar"]
 	path = bundle/vim-vinegar
 	url = https://github.com/tpope/vim-vinegar.git
-[submodule "bundle/vim-unimpaired"]
-	path = bundle/vim-unimpaired
-	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/ultisnips"]
-	path = bundle/ultisnips
-	url = https://github.com/SirVer/ultisnips.git
-[submodule "bundle/gitignore"]
-	path = bundle/gitignore
-	url = https://github.com/vim-scripts/gitignore.git
-[submodule "bundle/vim-gradle"]
-	path = bundle/vim-gradle
-	url = https://github.com/tfnico/vim-gradle.git
-[submodule "bundle/fzf.vim"]
-	path = bundle/fzf.vim
-	url = https://github.com/junegunn/fzf.vim.git
-[submodule "bundle/fzf"]
-	path = bundle/fzf
-	url = https://github.com/junegunn/fzf.git
-[submodule "bundle/vim-javascript"]
-	path = bundle/vim-javascript
-	url = https://github.com/pangloss/vim-javascript.git
+[submodule "bundle/vim-buffergator"]
+	path = bundle/vim-buffergator
+	url = https://github.com/jeetsukumaran/vim-buffergator

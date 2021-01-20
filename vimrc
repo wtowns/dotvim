@@ -18,7 +18,7 @@ set nocompatible
 
 let g:goldenview__enable_default_mapping = 0
 
-let g:pathogen_disabled = ['ctrlp.vim']
+let g:pathogen_disabled = ['ctrlp.vim','omnisharp-vim','YouCompleteMe','ultisnips']
 
 " pathogen-managed plugins, go!
 call pathogen#infect()
@@ -191,9 +191,9 @@ let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
-let g:UltiSnipsExpandTrigger = "<tab>"
-let g:UltiSnipsJumpForwardTrigger = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+"let g:UltiSnipsExpandTrigger = "<tab>"
+"let g:UltiSnipsJumpForwardTrigger = "<tab>"
+"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 "}}}
 " Autocommands --------------------------------------------------------{{{
@@ -361,7 +361,6 @@ if has("gui_running")
 endif
 
 " tags, files, and buffers
-nnoremap <leader>b :Buffers<cr>
 
 " go to tag in new tab
 nnoremap <leader>g] :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
