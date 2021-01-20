@@ -1,0 +1,11 @@
+" Basic settings
+set ignorecase
+set smartcase
+set smartjoin
+set ideajoin
+
+" jk -> ESC
+inoremap jk <ESC>
+inoremap jK <ESC>
+inoremap Jk <ESC>
+inoremap JK <ESC>
