@@ -24,15 +24,6 @@ let g:pathogen_disabled = ['ctrlp.vim','omnisharp-vim','YouCompleteMe','ultisnip
 call pathogen#infect()
 
 "}}}
-" Powerline -----------------------------------------------------------{{{
-
-if has('python')
-  python from powerline.vim import setup as powerline_setup
-  python powerline_setup()
-  python del powerline_setup
-endif
-
-"}}}
 " Workarounds ---------------------------------------------------------{{{
 
 " Screen defaults to 2 colors
