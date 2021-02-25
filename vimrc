@@ -25,6 +25,7 @@ set nocompatible
 call plug#begin()
 
 Plug 'jeetsukumaran/vim-buffergator'
+Plug 'leafgarland/typescript-vim'
 Plug 'nanotech/jellybeans.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
