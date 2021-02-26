@@ -99,7 +99,6 @@ if &t_Co > 2 || has("gui_running")
 		let g:jellybeans_overrides = {
 		\	'Folded': { 'guifg': 'a0a8b0', 'guibg': 'Black', 'ctermfg': 'a0a8b0', 'ctermbg': 'Black', 'attr': 'italic' },
 		\	'MatchParen': { 'guifg': 'ffffff', 'guibg': '000000', 'ctermfg': '', 'ctermbg': 'Black', 'attr': 'bold'}
-		\	'background': { 'guibg': 'Black', 'ctermbg': 'Black' }
 		\}
 	else
 		let g:jellybeans_overrides = {
