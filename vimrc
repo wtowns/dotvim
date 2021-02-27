@@ -29,6 +29,7 @@ Plug 'nanotech/jellybeans.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
+Plug 'yegappan/grep'
 
 call plug#end()
 
@@ -236,12 +237,12 @@ vnoremap p pgvy
 " search & replace
 nnoremap <Leader>sr :%s/\<<C-r><C-w>\>/
 
-" project Ack
+" project search
 if executable('ag')
 	let g:ackprg = 'ag --nogroup --nocolor --column'
 endif
-nnoremap <Leader>gg :Ack! -i ''<Left>
-nnoremap <Leader>gw :Ack! -i ''<Left><C-R><C-W><CR>
+nnoremap <Leader>gg :Ag 
+nnoremap <Leader>gw :Ag <C-R><C-W><CR>
 
 " copy to X11 clipboard
 vnoremap <Leader>c :call CopyToX11Primary()<CR>
