@@ -17,11 +17,6 @@ setlocal completeopt=longest,menuone
 :set tags=tags;/
 
 " }}}
-" Dictionary ---------------------------------------------------------------- {{{
-"
-setlocal dictionary-=$HOME/.vim/dict/unity.dict dictionary+=$HOME/.vim/dict/unity.dict
-
-" }}}
 " Indentation --------------------------------------------------------------- {{{
 
 setlocal indentexpr=GetCSIndent()
