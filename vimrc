@@ -16,10 +16,6 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-let g:goldenview__enable_default_mapping = 0
-
-let g:pathogen_disabled = ['ctrlp.vim','omnisharp-vim','YouCompleteMe','ultisnips']
-
 " pathogen-managed plugins, go!
 call pathogen#infect()
 
@@ -124,61 +120,6 @@ set listchars+=eol:¬
 "}}}
 " Plugin Options ------------------------------------------------------{{{
 
-" Try turning off delimitmate
-let delimitMate_offByDefault = 1
-
-" Don't jump to the first item in cscope searches
-let Cscope_JumpError = 0
-
-" CtrlP mixed mode by default
-let g:ctrlp_cmd = 'CtrlPMixed'
-let g:ctrlp_mruf_relative = 1
-" Default to filename mode
-let g:ctrlp_by_filename = 1
-" Use the silver searcher in CtrlP
-if executable('ag')
-	let g:ctrlp_user_command = {
-	\ 'types': {
-		\ 1: ['.git', 'cd %s && git ls-files; git submodule foreach "for file in $(git ls-files); do echo \"$path/$file\"; done"'],
-		\ 2: ['.hg', 'hg --cwd %s locate -I .'],
-		\ },
-	\ 'fallback': 'find %s -type f'
-	\ }
-
-endif
-" No limit to CtrlP file count
-let g:ctrlp_max_files = 0
-" Search from root project directory in CtrlP, starting from CWD; use CWD as
-"  fallback
-let g:ctrlp_working_path_mode = 'rwa'
-" Keep the ctrlp cache between sessions
-let g:ctrlp_clear_cache_on_exit = 0
-" Increase window size
-let g:ctrlp_max_height = 20
-" Lazy update
-let g:ctrlp_lazy_update=1
-" Add tag search to CtrlP
-let g:ctrlp_extensions = ['tag']
-
-" Use OmniSharp for syntastic checkers
-let g:syntastic_cs_checkers = ['syntax', 'semantic', 'issues']
-
-" Eclim
-let g:EclimJavaImplInsertAtCursor = 1
-
-" YouCompleteMe
-let g:ycm_auto_trigger = 0 " Turn off the popup-as-you-type (feels slow to me)
-"
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-let g:SuperTabDefaultCompletionType = '<C-n>'
-
-" better key bindings for UltiSnipsExpandTrigger
-"let g:UltiSnipsExpandTrigger = "<tab>"
-"let g:UltiSnipsJumpForwardTrigger = "<tab>"
-"let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-
 "}}}
 " Autocommands --------------------------------------------------------{{{
 
@@ -217,34 +158,12 @@ endif " has("autocmd")
 " Functions -----------------------------------------------------------{{{
 
 " Convenient command to see the difference between the current buffer and the
-" file it was loaded from, thus the changes you made.
+" file it was loaded from (the changes you made).
 " Only define it when not defined already.
 if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
-
-" copy to X11 PRIMARY buffer (middle-click to paste (shift+insert in terminal))
-function! CopyToX11Primary() range
-    echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\n")).'| xsel -i')
-endfunction
-
-" Write to the Windows clipboard
-function! Putclip(type, ...) range
-	let sel_save = &selection
-	let &selection = "inclusive"
-	let reg_save = @@
-	if a:type == 'n'
-		silent exe a:firstline . "," . a:lastline . "y"
-	elseif a:type == 'c'
-		silent exe a:1 . "," . a:2 . "y"
-	else
-		silent exe "normal! `<" . a:type . "`>y"
-	endif
-	call writefile(split(@@,"\n"), '/dev/clipboard')
-	let &selection = sel_save
-	let @@ = reg_save
-endfunction
 
 function! NextSection(backwards, visual)
 	if a:visual
@@ -258,16 +177,6 @@ function! NextSection(backwards, visual)
 	endif
 
 	execute 'silent normal! ' . dir . '^\s*$' . "\r"
-endfunction
-
-command! -nargs=0 -bar Qargs execute 'args' QuickfixFilenames()
-function! QuickfixFilenames()
-	" Building a hash ensures we get each buffer only once
-	let buffer_numbers = {}
-	for quickfix_item in getqflist()
-		let buffer_numbers[quickfix_item['bufnr']] = bufname(quickfix_item['bufnr'])
-	endfor
-	return join(map(values(buffer_numbers), 'fnameescape(v:val)'))
 endfunction
 
 "}}}
