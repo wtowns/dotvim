@@ -20,6 +20,18 @@ set nocompatible
 call pathogen#infect()
 
 "}}}
+" Plugin List ---------------------------------------------------------{{{
+
+" Plugins are managed by vim-plug; see https://github.com/junegunn/vim-plug
+" Check plugin status with :PlugStatus
+
+call plug#begin()
+
+Plug 'tpope/vim-fugitive'
+
+call plug#end()
+
+"}}}
 " Workarounds ---------------------------------------------------------{{{
 
 " Screen defaults to 2 colors
