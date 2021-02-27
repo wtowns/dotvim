@@ -16,9 +16,6 @@ endif
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
-" pathogen-managed plugins, go!
-call pathogen#infect()
-
 "}}}
 " Plugin List ---------------------------------------------------------{{{
 
@@ -27,7 +24,11 @@ call pathogen#infect()
 
 call plug#begin()
 
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'nanotech/jellybeans.vim'
+Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-vinegar'
 
 call plug#end()
 
