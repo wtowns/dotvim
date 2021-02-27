@@ -1,6 +1,0 @@
-#!/bin/bash
-
-# First, checkout any missing bundles
-git submodule update --init
-
-./build-plugins
