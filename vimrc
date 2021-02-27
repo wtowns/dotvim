@@ -87,14 +87,13 @@ if has('mouse')
   set mouse=a
 endif
 
-" Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
-if &t_Co > 2 || has("gui_running")
-  syntax on
-endif
 
-" colorscheme
 if &t_Co > 2 || has("gui_running")
+	" Switch syntax highlighting on, but only when the terminal has colors
+	syntax on
+
+	" Color scheme settings
 	if has("gui_running")
 		let g:jellybeans_overrides = {
 		\	'Folded': { 'guifg': 'a0a8b0', 'guibg': 'Black', 'ctermfg': 'a0a8b0', 'ctermbg': 'Black', 'attr': 'italic' },
@@ -108,7 +107,7 @@ if &t_Co > 2 || has("gui_running")
 		\}
 	endif
 	set background=dark
-	colorscheme jellybeans
+	silent! colorscheme jellybeans
 	" This is overridden manually in jellybeans; fix it
 	hi SpecialKey ctermbg=none
 endif
