@@ -108,14 +108,9 @@ if &t_Co > 2 || has("gui_running")
 		\}
 	endif
 	set background=dark
-	if &term == "rxvt-unicode-256color"
-		let g:HemisuTransparentBackground = 1
-		colorscheme hemisu
-	else
-		colorscheme jellybeans
-		" This is overridden manually in jellybeans; fix it
-		hi SpecialKey ctermbg=none
-	endif
+	colorscheme jellybeans
+	" This is overridden manually in jellybeans; fix it
+	hi SpecialKey ctermbg=none
 endif
 
 " Preferred line endings
