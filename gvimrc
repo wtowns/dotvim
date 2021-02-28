@@ -1,1 +1,3 @@
-set guifont=Literation\ Mono\ Powerline:h18
+if filereadable(expand("$HOME/.gvimrc-local"))
+    source $HOME/.gvimrc-local
+endif
